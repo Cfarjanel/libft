@@ -6,16 +6,13 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 19:48:01 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/05/14 21:15:08 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/05/24 14:51:46 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-/*
-** négatif en base 10 à corriger
-*/
 static int		ft_len(unsigned int n, int base)
 {
 	int cpt;
@@ -29,7 +26,13 @@ static int		ft_len(unsigned int n, int base)
 	return (cpt);
 }
 
-char		*ft_itoa_base(int value, int base)
+
+/*
+** nb = 55 si MAJ
+** nb = 87 si min
+** négatif en base 10 à corriger
+*/
+char		*ft_itoa_base(int value, int base, int nb)
 {
 	int				i;
 	char			*str;
@@ -49,7 +52,7 @@ char		*ft_itoa_base(int value, int base)
 	while (value != 0)
 	{
 		if (value % base > 9)
-			str[i] = (value % base) + 55;
+			str[i] = (value % base) + nb;
 		else
 			str[i] = (value % base) + 48;
 		value /= base;
