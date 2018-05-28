@@ -1,39 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putwstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 19:09:40 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/05/28 18:46:44 by cfarjane         ###   ########.fr       */
+/*   Created: 2018/05/28 12:48:15 by cfarjane          #+#    #+#             */
+/*   Updated: 2018/05/28 13:05:40 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-int		ft_atoi(const char *str)
+void	ft_putwstr(wchar_t *str)
 {
-	int i;
-	int n;
-	int neg;
-
-	i = 0;
-	n = 0;
-	neg = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (*str)
 	{
-		if (str[i] == '-')
-			neg = -1;
-		i++;
+		ft_putwchar(*str);
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		n = n * 10;
-		n = (str[i] - 48) + n;
-		i++;
-	}
-	return (n * neg);
 }

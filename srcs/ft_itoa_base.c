@@ -6,12 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 19:48:01 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/05/24 14:51:46 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/05/28 13:07:28 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
 static int		ft_len(unsigned int n, int base)
 {
