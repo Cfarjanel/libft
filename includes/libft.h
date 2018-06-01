@@ -6,7 +6,7 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:13:18 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/05/28 18:50:58 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/06/01 19:25:24 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 char				*ft_strccpy(char *str, char c);
 char				*ft_itoa_base(int value, int base, int nb);
+void				ft_exit(char *str, int fd);
 
 #endif
