@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strtolower.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/17 12:32:25 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/06/04 18:48:09 by cfarjane         ###   ########.fr       */
+/*   Created: 2018/06/13 14:00:16 by cfarjane          #+#    #+#             */
+/*   Updated: 2018/06/13 15:23:23 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strtolower(char *str)
 {
-	size_t	i;
-	char	*str;
+	int i;
 
-	if (!s)
-		return (NULL);
-	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
 	i = 0;
-	while (i < len && s[start])
+	while (str[i])
 	{
-		str[i] = s[start];
-		start++;
+		if (str[i] >= 65 && str[i] <= 90)
+			str[i] += 32;
 		i++;
 	}
-	str[i] = '\0';
 	return (str);
 }

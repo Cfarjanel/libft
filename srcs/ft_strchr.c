@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/16 20:55:50 by cfarjane          #+#    #+#             */
-/*   Updated: 2017/11/24 20:05:03 by cfarjane         ###   ########.fr       */
+/*   Created: 2017/11/16 20:56:37 by cfarjane          #+#    #+#             */
+/*   Updated: 2017/11/25 17:40:44 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

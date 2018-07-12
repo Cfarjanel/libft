@@ -6,22 +6,26 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 12:09:21 by cfarjane          #+#    #+#             */
-/*   Updated: 2017/11/25 15:46:13 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/06/04 18:47:56 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
-void	ft_putstr(char const *s)
+int		ft_putstr(char const *s)
 {
 	int i;
+	int	ret;
 
+	ret = 0;
 	i = 0;
 	if (!s)
-		return ;
+		return (0);
 	while (s[i])
 	{
 		ft_putchar(s[i]);
 		i++;
+		ret++;
 	}
+	return (ret);
 }

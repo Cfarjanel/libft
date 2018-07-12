@@ -6,14 +6,14 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 19:24:02 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/06/01 19:24:51 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/06/06 16:57:22 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../../includes/libft.h"
 
-void	ft_exit(char *str, int fd)
+int		ft_exit(char *str, int fd)
 {
 	ft_putendl_fd(str, fd);
-	exit(1);
+	return (-1);
 }

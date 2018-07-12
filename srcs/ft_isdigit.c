@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 13:47:10 by cfarjane          #+#    #+#             */
-/*   Updated: 2017/11/24 18:54:57 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/06/04 18:46:46 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 int		ft_isdigit(int c)
 {

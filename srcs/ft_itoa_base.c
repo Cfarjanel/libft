@@ -6,69 +6,47 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 19:48:01 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/05/28 13:07:28 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/06/13 16:08:12 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "../../includes/libft.h"
 
-static int		ft_len(unsigned int n, int base)
+static int		ft_len(long long value, int base)
 {
 	int cpt;
 
 	cpt = 0;
-	while (n != 0)
+	while (value != 0)
 	{
-		n /= base;
+		value /= base;
 		cpt++;
 	}
 	return (cpt);
 }
 
-
-/*
-** nb = 55 si MAJ
-** nb = 87 si min
-** négatif en base 10 à corriger
-*/
-char		*ft_itoa_base(int value, int base, int nb)
+char			*ft_itoa_base(long long value, int base)
 {
-	int				i;
-	char			*str;
-	unsigned int	s;
-	int				nbr;
-	unsigned int	len;
+	char			*ret;
+	long long		len;
+	long long		neg;
 
-	i = 0;
-	s = (value < 0 ? 1 : 0);
-	nbr = (value < 0 ? -(value) : value);
-	len = ft_len(nbr, base);
-	if (!(str = (char*)malloc(sizeof(char) * (len + s + 1 + (value == 0)))))
+	if (value == 0)
+		return ("0");
+	if (value == -2147483648 && base == 10)
+		return ("-2147483648");
+	neg = ((long long)value < 0 && base == 10 ? 1 : 0);
+	value = ((long long)value < 0 ? (value *= - 1) : value);
+	len = ft_len(value, base);
+	if (!(ret = (char*)malloc(sizeof(char) * len)))
 		return (NULL);
-	str[len + s] = '\0';
-	str[0] = (s == 1 ? '-' : '0');
-	i = len + s - 1;
-	while (value != 0)
+	ret[len + neg] = '\0';
+	while (len-- > 0)
 	{
-		if (value % base > 9)
-			str[i] = (value % base) + nb;
-		else
-			str[i] = (value % base) + 48;
+		ret[len + neg] = (value % base) + (value % base > 9 ? 55 : 48);
 		value /= base;
-		i--;
 	}
-	return (str);
+	if (neg == 1)
+		ret[0] = '-';
+	return (ret);
 }
-
-/*
-**int		main(void)
-**{
-**	int value;
-**	int base;
-**
-**	value = 21;
-**	base = 16;
-**	printf("mine : %s\n", ft_itoa_base(value, base));
-**	return (0);
-**}
-*/
