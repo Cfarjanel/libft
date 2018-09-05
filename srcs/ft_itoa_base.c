@@ -6,7 +6,7 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 19:48:01 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/09/05 14:30:48 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 15:01:36 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char			*ft_itoa_base(long long value, int base)
 	if (value == -2147483648 && base == 10)
 		return ("-2147483648");
 	neg = ((long long)value < 0 && base == 10 ? 1 : 0);
-	value = ((long long)value < 0 ? (value *= - 1) : value);
+	value = ((long long)value < 0 ? (value *= -1) : value);
 	len = ft_len(value, base);
 	if (!(ret = (char*)malloc(sizeof(char) * len)))
 		return (NULL);

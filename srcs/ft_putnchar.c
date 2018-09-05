@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnstr.c                                       :+:      :+:    :+:   */
+/*   ft_putnchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/24 16:35:38 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/09/05 15:09:39 by cfarjane         ###   ########.fr       */
+/*   Created: 2018/09/05 14:51:55 by cfarjane          #+#    #+#             */
+/*   Updated: 2018/09/05 14:53:23 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_putnstr(char *s, int n)
+int		ft_putnchar(char c, int len)
 {
 	int i;
 
 	i = 0;
-	if (!s)
-		return (0);
-	while (s[i] && i < n)
+	while (len > i)
 	{
-		ft_putchar(s[i]);
+		write(1, &c, 1);
 		i++;
 	}
 	return (i);

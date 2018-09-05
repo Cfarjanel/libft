@@ -6,13 +6,19 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 13:30:37 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/09/05 14:33:34 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 15:06:31 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_putnbr(long long int n)
+static int	cheat_norme(long long int n, int ret)
+{
+	ft_putchar(n + '0');
+	return (++ret);
+}
+
+int			ft_putnbr(long long int n)
 {
 	unsigned int	nb;
 	int				ret;
@@ -33,10 +39,7 @@ int		ft_putnbr(long long int n)
 		}
 		nb = n;
 		if (nb < 10)
-		{
-			ft_putchar(n + '0');
-			return (++ret);
-		}
+			ret = cheat_norme(n, ret);
 		ret += ft_putnbr(n / 10);
 		ft_putchar((n % 10) + '0');
 		ret += 1;

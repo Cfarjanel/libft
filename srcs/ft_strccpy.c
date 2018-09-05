@@ -6,7 +6,7 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:02:07 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/09/05 14:35:29 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 15:04:37 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strccpy(char *str, char c)
 	i = 0;
 	if (!str)
 		return (NULL);
-	if(!(new = (char*)malloc(sizeof(char) * (ft_strlen(str) + 1))))
+	if (!(new = (char*)malloc(sizeof(char) * (ft_strlen(str) + 1))))
 		return (NULL);
 	while (str[i] != c && str[i])
 	{

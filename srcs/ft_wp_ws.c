@@ -6,7 +6,7 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 12:04:41 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/09/05 14:39:14 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 15:11:53 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ static int	cheat_norme(int ret, t_flags *f, wchar_t *str)
 {
 	ret += ft_putnchar(' ', f->width);
 	if (f->pre != -1)
-		ret += ft_putwstr(str);
+	{
+		ft_putwstr(str);
+		ret += ft_wstrlen(str);
+	}
 	return (ret);
 }
 
@@ -50,7 +53,10 @@ int			wwdpc_next(t_flags *flag, wchar_t *str, int ret)
 		if (flag->width > 0 && flag->minus == 0)
 			ret += ft_putnchar(' ', flag->width - len);
 		if (flag->pre != -1)
-			ret += ft_putwstr(str);
+		{
+			ft_putwstr(str);
+			ret += ft_wstrlen(str);
+		}
 	}
 	else
 	{

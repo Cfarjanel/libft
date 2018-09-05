@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnstr.c                                       :+:      :+:    :+:   */
+/*   ft_wcharlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/24 16:35:38 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/09/05 15:09:39 by cfarjane         ###   ########.fr       */
+/*   Created: 2018/09/05 14:53:30 by cfarjane          #+#    #+#             */
+/*   Updated: 2018/09/05 14:54:26 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_putnstr(char *s, int n)
+int		ft_wcharlen(wchar_t wchar)
 {
-	int i;
-
-	i = 0;
-	if (!s)
-		return (0);
-	while (s[i] && i < n)
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
-	return (i);
+	if (wchar <= 0x7F)
+		return (1);
+	else if (wchar <= 0x7FF)
+		return (2);
+	else if (wchar <= 0xFFFF)
+		return (3);
+	else if (wchar <= 0x10FFFF)
+		return (4);
+	return (0);
 }

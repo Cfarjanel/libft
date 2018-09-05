@@ -6,7 +6,7 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:13:18 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/09/05 14:28:33 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 15:07:49 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putchar(char c);
-void				ft_putnbr(int n);
+int					ft_putnbr(long long int n);
 void				ft_putstr_fd(char const *s, int fd);
-void				ft_putstr(char const *s);
+int					ft_putstr(char const *s);
 char				*ft_strcat(char *dst, const char *src);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strrchr(const char *s, int c);
@@ -78,7 +78,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
-char				*ft_itoa(int n);
+char				*ft_itoa(unsigned long long int n);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
@@ -86,7 +86,12 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 char				*ft_strccpy(char *str, char c);
-char				*ft_itoa_base(int value, int base, int nb);
-void				ft_exit(char *str, int fd);
+char				*ft_itoa_base(long long value, int base);
+int					ft_exit(char *str, int fd);
+int					ft_putnchar(char c, int len);
+int					ft_wcharlen(wchar_t wchar);
+int					ft_wstrlen(wchar_t *wstr);
+char				*ft_strtolower(char *str);
+int					ft_putnstr(char *str, int n);
 
 #endif

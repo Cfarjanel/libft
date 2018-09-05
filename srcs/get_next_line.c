@@ -6,7 +6,7 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 11:47:29 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/09/05 14:39:25 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:50:50 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static char		*ft_read(char *str, int fd)
 	return (str);
 }
 
-static char		*ft_strccpy(char *str, char c)
+static char		*local_strccpy(char *str, char c)
 {
 	char	*new;
 	int		i;
@@ -71,7 +71,7 @@ int				get_next_line(const int fd, char **line)
 	{
 		while (str[i] && str[i] != '\n' && str[i + 1] != '\0')
 			i++;
-		*line = ft_strccpy(str, '\n');
+		*line = local_strccpy(str, '\n');
 		tmp = str;
 		if (*(str + i + 1))
 			str = ft_strdup(&str[i + 1]);

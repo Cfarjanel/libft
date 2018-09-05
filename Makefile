@@ -24,7 +24,6 @@ SRCS_P = ft_atoi.c \
 		 ft_itoa_base.c \
 		 ft_memalloc.c \
 		 ft_memset.c \
-		 ft_putnchar.c \
 		 ft_strccpy.c \
 		 ft_strequ.c \
 		 ft_strmapi.c \
@@ -67,8 +66,9 @@ SRCS_P = ft_atoi.c \
 		 ft_strlcat.c \
 		 ft_strnequ.c \
 		 ft_strtolower.c \
-		 ft_wcharlen.c \
+		 ft_putnchar.c \
 		 ft_wstrlen.c \
+		 ft_wcharlen.c \
 		 get_next_line.c \
 		 ft_cconv.c \
 		 ft_diconv.c \
