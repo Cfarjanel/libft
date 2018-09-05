@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 15:42:10 by cfarjane          #+#    #+#             */
-/*   Updated: 2017/12/04 12:52:06 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:31:01 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {

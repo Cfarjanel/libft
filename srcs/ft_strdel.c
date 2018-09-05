@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 12:14:39 by cfarjane          #+#    #+#             */
-/*   Updated: 2017/11/21 17:08:43 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:35:58 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_strdel(char **as)
 {

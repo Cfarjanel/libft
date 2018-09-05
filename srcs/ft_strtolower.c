@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/13 14:00:16 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/06/13 15:23:23 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:38:23 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strtolower(char *str)
 {

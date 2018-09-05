@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:33:25 by cfarjane          #+#    #+#             */
-/*   Updated: 2017/11/30 17:36:37 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:35:52 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {

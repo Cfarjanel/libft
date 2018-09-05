@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 19:24:02 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/06/06 16:57:22 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:29:50 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "../includes/libft.h"
 
 int		ft_exit(char *str, int fd)
 {

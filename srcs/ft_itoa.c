@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 12:34:36 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/06/13 16:08:15 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:30:41 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "../includes/libft.h"
 
 static	int		ft_len(int n)
 {

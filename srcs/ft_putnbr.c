@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 13:30:37 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/06/11 15:32:37 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:33:34 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "../includes/libft.h"
 
 int		ft_putnbr(long long int n)
 {

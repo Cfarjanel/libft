@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 16:35:38 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/04/24 16:38:31 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:33:48 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_putnstr(char *s, int n)
 {

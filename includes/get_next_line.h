@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   lst_get_next_line.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/11 12:09:21 by cfarjane          #+#    #+#             */
-/*   Updated: 2018/09/05 14:33:54 by cfarjane         ###   ########.fr       */
+/*   Created: 2018/01/31 16:54:48 by cfarjane          #+#    #+#             */
+/*   Updated: 2018/03/12 19:36:19 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFF_SIZE 100
+# include <unistd.h>
+# include <stdlib.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include "libft/libft.h"
+# include <stdio.h>
 
-int		ft_putstr(char const *s)
-{
-	int i;
-	int	ret;
+int					get_next_line(const int fd, char **line);
 
-	ret = 0;
-	i = 0;
-	if (!s)
-		return (0);
-	while (s[i])
-	{
-		ft_putchar(s[i]);
-		i++;
-		ret++;
-	}
-	return (ret);
-}
+#endif

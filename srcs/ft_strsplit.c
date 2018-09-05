@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 12:30:45 by cfarjane          #+#    #+#             */
-/*   Updated: 2017/12/05 18:16:23 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:37:59 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int		cpt_wrds(const char *str, char c)
 {

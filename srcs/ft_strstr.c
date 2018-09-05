@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:48:27 by cfarjane          #+#    #+#             */
-/*   Updated: 2017/12/01 23:26:37 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:38:13 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strstr(const char *str, const char *needle)
 {

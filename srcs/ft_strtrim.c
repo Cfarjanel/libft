@@ -6,11 +6,11 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 12:33:27 by cfarjane          #+#    #+#             */
-/*   Updated: 2017/12/05 18:15:41 by cfarjane         ###   ########.fr       */
+/*   Updated: 2018/09/05 14:38:28 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	len(char const *s)
 {
