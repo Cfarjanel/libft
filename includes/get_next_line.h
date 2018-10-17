@@ -19,6 +19,7 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include "./libft.h"
+# define MAX_SIZE_FD 2560
 
 int					get_next_line(const int fd, char **line);
 

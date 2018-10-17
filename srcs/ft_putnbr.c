@@ -40,9 +40,12 @@ int			ft_putnbr(long long int n)
 		nb = n;
 		if (nb < 10)
 			ret = cheat_norme(n, ret);
-		ret += ft_putnbr(n / 10);
-		ft_putchar((n % 10) + '0');
-		ret += 1;
+		else
+		{
+			ret += ft_putnbr(n / 10);
+			ft_putchar((n % 10) + '0');
+			ret += 1;
+		}
 	}
 	return (ret);
 }
