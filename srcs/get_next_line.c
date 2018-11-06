@@ -12,52 +12,31 @@
 
 #include "../includes/libft.h"
 
-static char	*readline(const int fd, char *buff, int *ret)
+int				get_next_line(const int fd, char **line)
 {
-	char	tmp[BUFF_SIZE + 1];
-	char	*tmp2;
+	int			rd;
+	char		buf[BUFF_SIZE + 1];
+	static char *str;
+	char		*cpy;
 
-	*ret = read(fd, tmp, BUFF_SIZE);
-	tmp[*ret] = '\0';
-	tmp2 = buff;
-	if (!(buff = ft_strjoin(buff, tmp)))
-		return (NULL);
-	ft_strdel(&tmp2);
-	return (buff);
-}
-
-int			ft_cpy_end(char **line, char **buff)
-{
-	if (!(*line = ft_strdup(*buff)))
+	if (!line || fd < 0 || !(str = str ? str : ft_strnew(1)))
 		return (-1);
-	ft_bzero(*buff, ft_strlen(*buff));
-	return (1);
-}
-
-int			get_next_line(const int fd, char **line)
-{
-	static char		*buff = "";
-	int				ret;
-	char			*str;
-
-	ret = 1;
-	if (!line || fd < 0 || (buff[0] == '\0' && (!(buff = ft_strnew(0)))))
-		return (-1);
-	while (ret > 0)
+	while (!ft_strchr(str, '\n') && (rd = read(fd, buf, BUFF_SIZE)) != 0)
 	{
-		if ((str = ft_strchr(buff, '\n')) != NULL)
-		{
-			*str = '\0';
-			if (!(*line = ft_strdup(buff)))
-				return (-1);
-			ft_memmove(buff, str + 1, ft_strlen(str + 1) + 1);
-			return (1);
-		}
-		if (!(buff = readline(fd, buff, &ret)))
+		if (rd == ((buf[rd] = '\0') - 1))
 			return (-1);
+		cpy = ft_strjoin(str, buf);
+		free(str);
+		str = cpy;
 	}
-	ft_strdel(&str);
-	if (ret == 0 && ft_strlen(buff))
-		ret = ft_cpy_end(&(*line), &buff);
-	return (ret);
+	*line = (ft_strchr(str, '\n') ? ft_strsub(str, 0,
+				ft_strchr(str, '\n') - str) : ft_strdup(str));
+	if (ft_strchr(cpy = str, '\n'))
+	{
+		str = ft_strsub(str, ft_strchr(str, '\n') - str + 1, ft_strlen(str));
+		free(cpy);
+	}
+	else
+		ft_strdel(&str);
+	return (!str && ft_strlen(*line) == 0 ? 0 : 1);
 }
