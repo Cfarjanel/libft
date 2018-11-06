@@ -38,7 +38,6 @@ SRCS_P = ft_atoi.c \
 		 ft_striter.c \
 		 ft_strncat.c \
 		 ft_strsplit.c \
-		 rostring.c \
 		 ft_isalpha.c \
 		 ft_lstdel.c \
 		 ft_memchr.c \

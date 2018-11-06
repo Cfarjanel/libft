@@ -12,10 +12,20 @@
 
 #include "../includes/libft.h"
 
-static int	cheat_norme(long long int n, int ret)
+static int	cheat_norme(long long int n, int ret, unsigned int nb)
 {
-	ft_putchar(n + '0');
-	return (++ret);
+	if (nb < 10)
+	{
+		ft_putchar(n + '0');
+		return (++ret);
+	}
+	else
+	{
+		ret += ft_putnbr(n / 10);
+		ft_putchar((n % 10) + '0');
+		ret += 1;
+		return (ret);
+	}
 }
 
 int			ft_putnbr(long long int n)
@@ -38,14 +48,7 @@ int			ft_putnbr(long long int n)
 			ret += 1;
 		}
 		nb = n;
-		if (nb < 10)
-			ret = cheat_norme(n, ret);
-		else
-		{
-			ret += ft_putnbr(n / 10);
-			ft_putchar((n % 10) + '0');
-			ret += 1;
-		}
+		ret = cheat_norme(n, ret, nb);
 	}
 	return (ret);
 }
