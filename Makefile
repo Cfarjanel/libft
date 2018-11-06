@@ -100,20 +100,20 @@ OBJ = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "$(GREEN)[✓]$(NC)$(CL) Objects of $(NAME) compiled$(NC)"
+	@echo "$(GREEN)✓$(NC)$(CL) Objects of $(NAME) compiled$(NC)"
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "$(GREEN)[✓]$(NC)$(CL) library $(NAME) built$(NC)"
+	@echo "$(GREEN)✓$(NC)$(CL) library $(NAME) built$(NC)"
 
 %.o: %.c
 	@$(CC) -c $< -o $@ -I$(HEADER) $(CFLAGS)
 
 clean:
 	@rm -Rf $(OBJ)
-	@echo "$(RED)[-]$(NC)$(CL2) Objects of $(NAME) cleaned"
+	@echo "$(RED)x$(NC)$(CL2) Objects of $(NAME) cleaned"
 
 fclean: clean
 	@rm -Rf $(NAME)
-	@echo "$(RED)[-]$(NC)$(CL2) Library $(NAME) cleaned"
+	@echo "$(RED)x$(NC)$(CL2) Library $(NAME) cleaned"
 
 re: fclean all

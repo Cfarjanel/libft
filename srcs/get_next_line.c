@@ -21,7 +21,10 @@ static char	*readline(const int fd, char *buff, int *ret)
 	tmp[*ret] = '\0';
 	tmp2 = buff;
 	if (!(buff = ft_strjoin(buff, tmp)))
+	{
+		ft_strdel(&tmp2);
 		return (NULL);
+	}
 	ft_strdel(&tmp2);
 	return (buff);
 }
@@ -30,18 +33,18 @@ int			ft_cpy_end(char **line, char **buff)
 {
 	if (!(*line = ft_strdup(*buff)))
 		return (-1);
-	ft_bzero(*buff, ft_strlen(*buff));
+	ft_strdel(buff);//ft_bzero(buff, ft_strlen(buff));
 	return (1);
 }
 
 int			get_next_line(const int fd, char **line)
 {
-	static char		*buff = "";
+	static char		*buff = NULL;
 	int				ret;
 	char			*str;
 
 	ret = 1;
-	if (!line || fd < 0 || (buff[0] == '\0' && (!(buff = ft_strnew(0)))))
+	if (!line || fd < 0 || (!buff && !(buff = ft_strnew(0))))
 		return (-1);
 	while (ret > 0)
 	{
@@ -51,12 +54,17 @@ int			get_next_line(const int fd, char **line)
 			if (!(*line = ft_strdup(buff)))
 				return (-1);
 			ft_memmove(buff, str + 1, ft_strlen(str + 1) + 1);
+			if (*buff == '\0')
+			{
+				ft_strdel(&buff);
+				write(2, "coucou", 6);
+			}
 			return (1);
 		}
 		if (!(buff = readline(fd, buff, &ret)))
 			return (-1);
 	}
-	ft_strdel(&str);
+	// ft_strdel(&str);
 	if (ret == 0 && ft_strlen(buff))
 		ret = ft_cpy_end(&(*line), &buff);
 	return (ret);
