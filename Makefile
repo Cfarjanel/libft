@@ -80,7 +80,8 @@ SRCS_P = ft_atoi.c \
 		 ft_printf.c \
 		 ft_tools.c \
 		 ft_width_prec_decimal.c \
-		 ft_wp_ws.c
+		 ft_wp_ws.c \
+		 ft_doubletabfree.c \
 
 SRCS = $(addprefix srcs/, $(SRCS_P))
 

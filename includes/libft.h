@@ -93,5 +93,6 @@ int					ft_wcharlen(wchar_t wchar);
 int					ft_wstrlen(wchar_t *wstr);
 char				*ft_strtolower(char *str);
 int					ft_putnstr(char *str, int n);
+void				free_double_tab(void **tab, int x);
 
 #endif
