@@ -5,7 +5,7 @@ void        free_double_tab(void **tab, int x)
     int i;
 
     i = 0;
-    while (i < x)
+    while (tab && i < x)
     {
         ft_memdel(&(tab[i]));
         i++;
