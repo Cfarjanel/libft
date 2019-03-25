@@ -83,6 +83,8 @@ SRCS_P = ft_atoi.c \
 		 ft_wp_ws.c \
 		 ft_doubletabfree.c \
 		 ft_check_leaks.c \
+		 lst_del_last_node.c\
+		 lst_del_first_node.c\
 
 SRCS = $(addprefix srcs/, $(SRCS_P))
 

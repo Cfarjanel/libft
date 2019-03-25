@@ -6,7 +6,7 @@
 /*   By: cfarjane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:13:18 by cfarjane          #+#    #+#             */
-/*   Updated: 2019/02/25 17:24:10 by cfarjane         ###   ########.fr       */
+/*   Updated: 2019/03/25 13:50:47 by cfarjane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,8 @@ char				*ft_strtolower(char *str);
 int					ft_putnstr(char *str, int n);
 void				free_double_tab(void **tab, int x);
 void				ft_check_leaks(char *path);
+void				lst_del_first_node(t_list *head);
+void				lst_del_last_node(t_list *head);
+
 
 #endif
